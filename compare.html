@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tonal Visualizer</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="css/tone.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.min.css" />
+    <link rel="stylesheet" href="jquery-ui-1.12.1/jquery-ui.theme.css" />
+    <script src="jquery-ui-1.12.1/external/jquery/jquery.js"></script>
+    <script src="jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script src="js/compare.js"></script>
+  </head>
+  <body>
+    <div class="nav-container">
+      <div class="wrapper">
+        <nav>
+            <ul class="nav-items">
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+
+              <li>
+                <a href="record.html">Record</a>
+              </li>
+            </ul>
+        
+          <h1 style="margin-right: 45%;"><b>Native Speaker Tones</b></h1>
+        
+      </div>
+    </div>
+
+    <div class="header-container">
+      <div class="wrapper">
+        <header>
+          <div class="hero-content">
+            <h1>Visualize Your Tones</h1>
+            <p>
+              This page highlights the basic 4 tones of Mandarin Chinese with an example from the University of Michigan. Select the tone from the dropdown. <b>Note:</b>The word from the recording is <b><i>"zhuang"</i></b>
+            </p>
+            <br />
+            <h2>Recording from Native Speaker</h2>
+          </div>
+          <section>
+            <label for="slider" class="tooltip">Adjust Volume</label>
+            <div id="slider" class="ui-slider">
+            </div>
+            <!--using jQuery ui dropdown to allow user to select tone-->
+            <fieldset>
+              <label for="tones">Select a Tone (1-4)</label>
+              <select name="tones" id="tones">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </fieldset>
+            <button id="audio-player">Play Tone</button>
+          </section>
+          <div id="canvas-container">
+            <canvas class="visualizer"></canvas>
+          </div>
+        </header>
+      </div>
+    </div> 
+  </body>
+</html>
